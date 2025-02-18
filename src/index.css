@@ -1,0 +1,33 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gaming-dark text-white antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-gaming-card border border-white/10 shadow-lg;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .feature-card {
+    @apply glass-card p-6 rounded-xl hover-scale;
+  }
+  
+  .price-card {
+    @apply glass-card p-8 rounded-xl hover-scale flex flex-col gap-4;
+  }
+  
+  .premium-button {
+    @apply bg-gaming-red hover:bg-primary-hover text-white px-6 py-3 rounded-lg 
+           transition-all duration-300 hover:shadow-lg hover:shadow-gaming-red/20;
+  }
+}
