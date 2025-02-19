@@ -12,3 +12,8 @@
 [build.environment]
   NODE_VERSION = "18"
   NEXT_PRIVATE_TARGET = "server"
+  GO_VERSION = "1.20"  # Specify Go version
+
+# Ensure compatibility with Netlify's build environment
+[build]
+  ignore = "git diff --quiet HEAD^ HEAD"
