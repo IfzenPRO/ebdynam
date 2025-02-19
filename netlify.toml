@@ -1,13 +1,13 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  functions = "netlify/functions"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [context.production]
-  branch = "main" # The branch to deploy
+  branch = "main"
 
 [build.environment]
-  NODE_VERSION = "14" # Specify your Node.js version if needed
-  # Add any other environment variables here
+  NODE_VERSION = "18"
